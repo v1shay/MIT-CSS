@@ -43,7 +43,8 @@ def main():
     
     print(f"===== Simple Calculator =====")
 
-    # Ask the user for sample input    
+    # Ask the user for sample input
+try:
     num1 = float(input("Enter the first number: "))
     num2 = float(input("Enter the second number: "))
     operation = input("Enter the operation (add, subtract, multiply, divide): ").strip().lower()
@@ -52,6 +53,8 @@ def main():
     result = simple_calculator(operation, num1, num2)
     print(f"The result of {operation}ing {num1} and {num2} is: {result}")
 
+except ValueError:
+    print("calculation failed gracefully.")
 
 if __name__ == "__main__":
     main()
